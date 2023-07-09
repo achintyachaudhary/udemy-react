@@ -1,32 +1,31 @@
-import './App.css';
-import ExpenseItem from './components/ExpenseItem';
+import Expenses from './components/Expenses';
 
 function App() {
-  const expenseList = [
+  const expenses = [
     {
-      'dateBought': new Date(2023, 7, 8),
-      'price': 100_000,
-      'name': 'Tata Harrier'
+      id: 'e1',
+      title: 'Toilet Paper',
+      amount: 94.12,
+      date: new Date(2020, 7, 14),
+    },
+    { id: 'e2', title: 'New TV', amount: 799.49, date: new Date(2021, 2, 12) },
+    {
+      id: 'e3',
+      title: 'Car Insurance',
+      amount: 294.67,
+      date: new Date(2021, 2, 28),
     },
     {
-      'dateBought': new Date(2023, 7, 9),
-      'price': 200_000,
-      'name': 'Tata Punch'
+      id: 'e4',
+      title: 'New Desk (Wooden)',
+      amount: 450,
+      date: new Date(2021, 5, 12),
     },
-    {
-      'dateBought': new Date(2023, 7, 10),
-      'price': 104_000,
-      'name': 'Tata Nexon'
-    },
-    {
-      'dateBought': new Date(2023, 7, 11),
-      'price': 120_000,
-      'name': 'Tata Safari'
-    }
-  ]
+  ];
+
   return (
-    <div className="App">
-      <ExpenseItem expenseList={expenseList}></ExpenseItem>
+    <div>
+      <Expenses items={expenses} />
     </div>
   );
 }
